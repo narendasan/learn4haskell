@@ -652,8 +652,10 @@ aren't ready for this boss yet!
 
 firstDigit :: Int -> Int
 firstDigit n
-  | n == mod (abs n) 10 = n
-  | otherwise = firstDigit (div n 10)
+  | abs_n == (mod abs_n 10) = abs_n
+  | otherwise = firstDigit (div abs_n 10)
+  where
+    abs_n = abs n
 
 
 {-
